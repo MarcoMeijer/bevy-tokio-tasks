@@ -11,13 +11,13 @@ keywords = ["gamedev", "bevy", "tokio", "async", "plugin"]
 categories = ["game-development", "asynchronous"]
 
 [dependencies]
-bevy_app = "0.15.0"
-bevy_ecs = "0.15.0"
+bevy_app = { version = "0.15", git="https://github.com/MarcoMeijer/bevy.git", branch="0.15-faster-ui" }
+bevy_ecs = { version = "0.15", git="https://github.com/MarcoMeijer/bevy.git", branch="0.15-faster-ui" }
 tokio = { version = "1", features = ["rt", "sync"] }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 tokio = { version = "1", features = ["rt-multi-thread"] }
 
 [dev-dependencies]
-bevy = { version = "0.15.0", default-features = false, features = ["bevy_core_pipeline", "bevy_asset", "bevy_render", "bevy_winit", "bevy_window", "x11"] }
+bevy = { version = "0.15", default-features = false, features = ["bevy_core_pipeline", "bevy_asset", "bevy_render", "bevy_winit", "bevy_window", "x11"], git="https://github.com/MarcoMeijer/bevy.git", branch="0.15-faster-ui" }
 tokio = { version = "1", features = ["time"] }
